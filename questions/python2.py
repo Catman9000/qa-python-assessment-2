@@ -31,7 +31,11 @@
 # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
+    my_list=[]
+    for x in string:
+        my_list.append(x*3)
+    my_list2 = ''.join(my_list)
+    return(my_list2)
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -52,7 +56,13 @@ def one(string):
 
 
 def two(number):
-    return False
+    for i in range(2,number):
+        if (number % i) == 0:
+            return False
+            break
+        else:
+            return True
+            break
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -124,7 +134,8 @@ def four(string1, string2):
 
 
 def five():
-    return []
+    import random
+    return(random.sample([i for i in range(100,200) if i%2==0], 5))
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -146,7 +157,18 @@ def five():
 
 
 def six(string):
-    return False
+    if string[-1] == "y" and string [-2] == "p":
+        return True
+    elif string [-1] == "Y" and string [-2] == "P":
+        return True
+    elif string [-1] == "Y" and string [-2] == "p":
+        return True
+    elif string [-1] == "y" and string [-2] == "P":
+        return True
+    else:
+        return False
+
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -214,8 +236,13 @@ def eight(string,  a):
 
 
 def nine(string1, string2):
-    return False
-
+    s = ""
+    for x, y in zip(string1, string2):
+        if x == y:
+                s+=str(x)
+        else:
+                s+=str(y)
+        return s           
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
     # <QUESTION 10>
